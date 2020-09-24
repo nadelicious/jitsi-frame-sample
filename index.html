@@ -9,8 +9,8 @@
             var domain = "meet.jit.si";
             var options = {
                 roomName: "JitsiMeetAPIExample",
-                width: 700,
-                height: 180,
+                width: 900,
+                height: 640,
                 parentNode: undefined,
                 configOverwrite: {},
                 interfaceConfigOverwrite: {
@@ -25,7 +25,7 @@
 				console.log('***participants***', participants);
 
 				if (participants.length) {
-					var localParticipant = participants.find((v) => v.participantId !== participant.id);
+					var localParticipant = participants.find((v) => v.participantId !== p.id);
 
 					if (localParticipant) {
 					    console.log('***localParticipant***', localParticipant);
