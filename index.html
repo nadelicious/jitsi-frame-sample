@@ -20,18 +20,16 @@
             var api = new JitsiMeetExternalAPI(domain, options);
 
 			api.on('participantJoined', function(p) {
-				var participants = api.getParticipantsInfo()
+				var participants = api.getParticipantsInfo();
 
-				console.log('***participants***', participants)
+				console.log('***participants***', participants);
 
 				if (participants.length) {
-					var localParticipant = participants.find(
-					(v) => v.participantId !== participant.id
-					)
+					var localParticipant = participants.find((v) => v.participantId !== participant.id);
 
 					if (localParticipant) {
-					console.log('***localParticipant***', localParticipant)
-						api.setLargeVideoParticipant(localParticipant.participantId)
+					    console.log('***localParticipant***', localParticipant);
+						api.setLargeVideoParticipant(localParticipant.participantId);
 					}
 				}
 
